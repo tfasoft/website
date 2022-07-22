@@ -5,8 +5,10 @@ import {
     CssBaseline,
     colors as Colors,
 } from "@mui/material";
+
 import Navbar from "./components/navbar";
 import HomePage from "./pages/home";
+import ContactUs from "./pages/contactus";
 
 function App() {
     const theme = createTheme({
@@ -25,6 +27,7 @@ function App() {
                 <Navbar/>
                 <Switch>
                     <Route path="/" exact><HomePage /></Route>
+                    <Route path="/contact" exact><ContactUs /></Route>
                 </Switch>
             </Router>
         </ThemeProvider>
