@@ -64,13 +64,15 @@ const ContactUs = () => {
         setOpenSnack(true);
     }
 
-    const sendEmail = () => {
-        if (name === '') setNameError(true);
-        if (email === '') setEmailError(true);
-        if (subject === '') setSubjectError(true);
-        if (message === '') setMessageError(true);
+    const env = process.env;
 
-        if (nameError && emailError && subjectError && messageError) {
+    const sendEmail = () => {
+        if (name !== '' && email !== '' && subject !== '' && message !== '') {
+            setNameError(false);
+            setEmailError(false);
+            setSubjectError(false);
+            setMessageError(false);
+
             const messageData = {
                 name,
                 surname,
@@ -79,20 +81,31 @@ const ContactUs = () => {
                 message,
             };
 
-            emailjs.send('Service ID', 'Template ID', messageData)
+            emailjs.send(env.REACT_APP_SERVICE_ID, env.REACT_APP_TEMPLATE_ID, messageData, env.REACT_APP_PUBLIC_KEY)
                 .then((result) => {
                     createSnack({
                         message: 'Message sent. Thank you!',
                         type: 'success',
                     });
+
+                    setName('');
+                    setSurname('');
+                    setEmail('');
+                    setSubject('');
+                    setMessage('');
                 })
                 .catch((error) => {
                     createSnack({
-                        message: 'Sorry, there was a error. Try again.',
+                        message: error.text,
                         type: 'error',
                     });
                 });
         } else {
+            if (name === '') setNameError(true);
+            if (email === '') setEmailError(true);
+            if (subject === '') setSubjectError(true);
+            if (message === '') setMessageError(true);
+
             createSnack({
                 message: 'Complete required fields first.',
                 type: 'error',
