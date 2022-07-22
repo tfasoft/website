@@ -6,12 +6,14 @@ import {
     colors as Colors,
 } from "@mui/material";
 import Navbar from "./components/navbar";
+import HomePage from "./pages/home";
 
 function App() {
     const theme = createTheme({
         palette: {
+            mode: "light",
             primary: {
-                main: Colors.orange[800]
+                main: Colors.orange[800],
             }
         }
     });
@@ -22,7 +24,7 @@ function App() {
             <Router>
                 <Navbar/>
                 <Switch>
-                    <Route path="/" exact>Index</Route>
+                    <Route path="/" exact><HomePage /></Route>
                 </Switch>
             </Router>
         </ThemeProvider>
