@@ -25,11 +25,18 @@ const drawerWidth = 240;
 const navItems = [
     {
         name: 'Dashboard',
-        href: 'https://dashboard.amirhossein.info'
+        href: 'https://dashboard.amirhossein.info',
+        inside: false,
     },
     {
         name: 'Docs',
-        href: 'https://docs.amirhossein.info'
+        href: 'https://docs.amirhossein.info',
+        inside: false,
+    },
+    {
+        name: 'Contact Us',
+        href: '/contact',
+        inside: true,
     }
 ];
 
@@ -60,7 +67,8 @@ const Navbar = () => {
                             disablePadding
                         >
                             <ListItemButton
-                                href={item.href}
+                                href={!item.inside && item.href}
+                                onClick={() => item.inside && history.push(item.href)}
                                 sx={{ textAlign: 'center' }}
                             >
                                 <ListItemText
@@ -111,7 +119,8 @@ const Navbar = () => {
                                 navItems.map((item) => (
                                     <Button
                                         key={item} sx={{ color: '#fff' }}
-                                        href={item.href}
+                                        href={!item.inside && item.href}
+                                        onClick={() => item.inside && history.push(item.href)}
                                     >
                                         {item.name}
                                     </Button>
