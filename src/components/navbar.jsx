@@ -79,9 +79,9 @@ const Navbar = () => {
     return (
         <Box>
             <AppBar
-                variant="outlined"
                 color="primary"
                 sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                elevation={0}
             >
                 <Container>
                     <Toolbar>
