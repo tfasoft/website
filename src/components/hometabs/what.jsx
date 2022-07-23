@@ -11,7 +11,7 @@ const WhatTab = () => {
                 paragraph
                 gutterBottom
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi
+                TFASoft is a new modern authentication way that is providing via Telegram.
             </Typography>
             <Button
                 variant="outlined"
@@ -21,6 +21,7 @@ const WhatTab = () => {
                         bgcolor: "primary.main"
                     }
                 }}
+                href="#about"
             >
                 Get started with TFA
             </Button>
