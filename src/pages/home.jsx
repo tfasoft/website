@@ -22,9 +22,53 @@ import {
 
 import TelegramLogo from "../assets/images/telegram_logo.png";
 
+import CocacolaLogo from "../assets/images/logos/Coca-Cola_logo_logotype_emblem.png";
+import MicrosoftLogo from "../assets/images/logos/microsoft_logo.png";
+import MetaLogo from "../assets/images/logos/meta_logo.png";
+import IntelLogo from "../assets/images/logos/intel_logo.png";
+import GoogleLogo from "../assets/images/logos/google_logo.png";
+import BlockChainLogo from "../assets/images/logos/blockchain_logo.png";
+import AppleLogo from "../assets/images/logos/apple_logo.png";
+import AmazonLogo from "../assets/images/logos/amazon-logo.png";
+
 import WhatTab from "../components/hometabs/what";
 import DocsTab from "../components/hometabs/docs";
 import Opensource from "../components/hometabs/opensource";
+
+const logos = [
+    {
+        alt: "Coca Cola",
+        img: CocacolaLogo,
+    },
+    {
+        alt: "Google",
+        img: GoogleLogo,
+    },
+    {
+        alt: "Meta",
+        img: MetaLogo,
+    },
+    {
+        alt: "Apple",
+        img: AppleLogo,
+    },
+    {
+        alt: "Amazon",
+        img: AmazonLogo,
+    },
+    {
+        alt: "Microsoft",
+        img: MicrosoftLogo,
+    },
+    {
+        alt: "Intel",
+        img: IntelLogo,
+    },
+    {
+        alt: "Blockchain",
+        img: BlockChainLogo,
+    },
+];
 
 const HomePage = () => {
     const [tab, setTab] = useState('1');
@@ -270,7 +314,7 @@ const HomePage = () => {
                     color="primary"
                     gutterBottom
                 >
-                    Our partners
+                    Trusted by many
                 </Typography>
                 <br />
                 <Grid
@@ -278,114 +322,34 @@ const HomePage = () => {
                     spacing={10}
                     container
                 >
-                    <Grid
-                        xs={1}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 70,
-                                    mb: "1rem",
-                                }}
-                            />
-                        </Box>
-                    </Grid>
-                    <Grid
-                        xs={1}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 70,
-                                    mb: "1rem",
-                                }}
-                            />
-                        </Box>
-                    </Grid>
-                    <Grid
-                        xs={1}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 70,
-                                    mb: "1rem",
-                                }}
-                            />
-                        </Box>
-                    </Grid>
-                    <Grid
-                        xs={1}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 70,
-                                    mb: "1rem",
-                                }}
-                            />
-                        </Box>
-                    </Grid>
-                    <Grid
-                        xs={1}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 70,
-                                    mb: "1rem",
-                                }}
-                            />
-                        </Box>
-                    </Grid>
-                    <Grid
-                        xs={1}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 70,
-                                    mb: "1rem",
-                                }}
-                            />
-                        </Box>
-                    </Grid>
+                    {
+                        logos.map((logo) => {
+                            return (
+                                <Grid
+                                    xs={1}
+                                    item
+                                >
+                                    <Box
+                                        sx={{
+                                            display: "flex",
+                                            textAlign: 'center',
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <Box
+                                            src={logo.img}
+                                            component="img"
+                                            alt={logo.alt}
+                                            sx={{
+                                                width: "100%"
+                                            }}
+                                        />
+                                    </Box>
+                                </Grid>
+                            );
+                        })
+                    }
                 </Grid>
             </Container>
         </Container>
