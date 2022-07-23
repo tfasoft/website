@@ -17,7 +17,9 @@ import {
 } from "@mui/lab";
 
 import {
-    Security,
+    Lock,
+    PrivacyTip,
+    Bolt
 } from "@mui/icons-material";
 
 import TelegramLogo from "../assets/images/telegram_logo.png";
@@ -67,6 +69,24 @@ const logos = [
     {
         alt: "Blockchain",
         img: BlockChainLogo,
+    },
+];
+
+const tips = [
+    {
+        title: "Secure",
+        icon: <Lock color="primary" sx={{ fontSize: 90, mb: "1rem" }} />,
+        text: "TFASoft is a secure way to authenticate and only one who can login to your account or use your account is just you. So, if anyone want to use your account and need to login to your account need to access your Telegram first!",
+    },
+    {
+        title: "Privacy",
+        icon: <PrivacyTip color="primary" sx={{ fontSize: 90, mb: "1rem" }} />,
+        text: "We have no access to your data. We only get your TelegramID to authenticate you with the site which is using out authentication.",
+    },
+    {
+        title: "Fast",
+        icon: <Bolt color="primary" sx={{ fontSize: 90, mb: "1rem" }} />,
+        text: "One of the fastest authentication provider is TFASoft that is only checking one token! You can see analytics from our CPU usages and other stuff!",
     },
 ];
 
@@ -207,96 +227,36 @@ const HomePage = () => {
                     spacing={10}
                     container
                 >
-                    <Grid
-                        xs={4}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 90,
-                                    mb: "1rem",
-                                }}
-                            />
-                            <Typography
-                                variant="h5"
-                                fontWeight="bold"
-                                gutterBottom
-                            >
-                                Title
-                            </Typography>
-                            <Typography
-                                paragraf
-                            >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid
-                        xs={4}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 90,
-                                    mb: "1rem",
-                                }}
-                            />
-                            <Typography
-                                variant="h5"
-                                fontWeight="bold"
-                                gutterBottom
-                            >
-                                Title
-                            </Typography>
-                            <Typography
-                                paragraf
-                            >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi
-                            </Typography>
-                        </Box>
-                    </Grid>
-                    <Grid
-                        xs={4}
-                        item
-                    >
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                            }}
-                        >
-                            <Security
-                                color="primary"
-                                sx={{
-                                    fontSize: 90,
-                                    mb: "1rem",
-                                }}
-                            />
-                            <Typography
-                                variant="h5"
-                                fontWeight="bold"
-                                gutterBottom
-                            >
-                                Title
-                            </Typography>
-                            <Typography
-                                paragraf
-                            >
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi
-                            </Typography>
-                        </Box>
-                    </Grid>
+                    {
+                        tips.map((tip) => {
+                            return (
+                                <Grid
+                                    xs={4}
+                                    item
+                                >
+                                    <Box
+                                        sx={{
+                                            textAlign: 'center',
+                                        }}
+                                    >
+                                        {tip.icon}
+                                        <Typography
+                                            variant="h5"
+                                            fontWeight="bold"
+                                            gutterBottom
+                                        >
+                                            {tip.title}
+                                        </Typography>
+                                        <Typography
+                                            paragraf
+                                        >
+                                            {tip.text}
+                                        </Typography>
+                                    </Box>
+                                </Grid>
+                            );
+                        })
+                    }
                 </Grid>
             </Container>
             <br />
