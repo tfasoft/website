@@ -16,6 +16,9 @@ function App() {
             mode: "light",
             primary: {
                 main: Colors.orange[800],
+            },
+            text: {
+                "titles": "#000080",
             }
         }
     });
