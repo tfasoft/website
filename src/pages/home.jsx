@@ -207,13 +207,13 @@ const HomePage = () => {
                         variant="h5"
                         fontWeight={700}
                         fontSize={40}
-                        color="primary"
+                        color="text.title"
                         gutterBottom
                     >
                         Why TFA?
                     </Typography>
                     <Typography
-                        color="text-secondary"
+                        color="text.secondary"
                         paragraph
                     >
                         With TFASoft you will be using Telegram as a authentication provider like providers such as Google, Facebook, Apple ID and many others.
@@ -271,7 +271,7 @@ const HomePage = () => {
                     variant="h5"
                     fontWeight={700}
                     fontSize={35}
-                    color="primary"
+                    color="text.title"
                     gutterBottom
                 >
                     Trusted by many
