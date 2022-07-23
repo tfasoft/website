@@ -174,6 +174,7 @@ const HomePage = () => {
                 </Grid>
             </Box>
             <Container
+                id="about"
                 maxWidth="md"
             >
                 <Box
@@ -195,9 +196,8 @@ const HomePage = () => {
                         color="text-secondary"
                         paragraph
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue mauris
-                        rhoncus aenean vel elit scelerisque
+                        With TFASoft you will be using Telegram as a authentication provider like providers such as Google, Facebook, Apple ID and many others.
+                        We (TFASoft) won't access your data. Even a name! It means that you can trust us like big companies that trust us!
                     </Typography>
                 </Box>
             </Container>
