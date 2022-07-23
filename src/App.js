@@ -18,7 +18,7 @@ function App() {
                 main: Colors.orange[800],
             },
             text: {
-                "titles": "#000080",
+                "title": "#000080",
             }
         }
     });
