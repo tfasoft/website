@@ -56,7 +56,7 @@ const Navbar = () => {
                 sx={{ my: 2 }}
                 onClick={() => history.push('/')}
             >
-                Telegram Factor Authentication
+                TFASoft
             </Typography>
             <Divider />
             <List>
@@ -112,7 +112,7 @@ const Navbar = () => {
                                 cursor: "pointer",
                             }}
                         >
-                            Telegram Factor Authentication
+                            TFASoft
                         </Typography>
                         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                             {
