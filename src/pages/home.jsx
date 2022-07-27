@@ -239,7 +239,6 @@ const HomePage = () => {
             </Container>
             <Container>
                 <Grid
-                    columns={{ xs: 3, md: 12 }}
                     spacing={10}
                     container
                 >
@@ -247,8 +246,9 @@ const HomePage = () => {
                         tips.map((tip) => {
                             return (
                                 <Grid
-                                    xs={3}
-                                    // sm={2}
+                                    md={3}
+                                    sm={6}
+                                    xs={12}
                                     item
                                 >
                                     <Box
@@ -295,7 +295,6 @@ const HomePage = () => {
                 </Typography>
                 <br />
                 <Grid
-                    columns={{ xs: 6, md: 12 }}
                     spacing={10}
                     container
                 >
@@ -303,7 +302,9 @@ const HomePage = () => {
                         logos.map((logo) => {
                             return (
                                 <Grid
-                                    xs={2}
+                                    md={3}
+                                    sm={6}
+                                    xs={12}
                                     item
                                 >
                                     <Box
