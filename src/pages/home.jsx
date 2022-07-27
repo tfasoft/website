@@ -19,7 +19,8 @@ import {
 import {
     Lock,
     PrivacyTip,
-    Bolt
+    Bolt,
+    Telegram,
 } from "@mui/icons-material";
 
 import TelegramLogo from "../assets/images/telegram_logo.png";
@@ -88,6 +89,11 @@ const tips = [
         icon: <Bolt color="primary" sx={{ fontSize: 90, mb: "1rem" }} />,
         text: "One of the fastest authentication provider is TFASoft that is only checking one token! You can see analytics from our CPU usages and other stuff!",
     },
+    {
+        title: "Telegram",
+        icon: <Telegram color="primary" sx={{ fontSize: 90, mb: "1rem" }} />,
+        text: "Main point! This authentication is using Telegram! Who doesn't use Telegram! Who doesn't want to manage its account with Telegram.",
+    }
 ];
 
 const HomePage = () => {
@@ -233,7 +239,7 @@ const HomePage = () => {
             </Container>
             <Container>
                 <Grid
-                    columns={{ xs: 4, md: 12 }}
+                    columns={{ xs: 3, md: 12 }}
                     spacing={10}
                     container
                 >
@@ -241,7 +247,8 @@ const HomePage = () => {
                         tips.map((tip) => {
                             return (
                                 <Grid
-                                    xs={4}
+                                    xs={3}
+                                    // sm={2}
                                     item
                                 >
                                     <Box
