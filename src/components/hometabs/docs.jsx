@@ -16,7 +16,7 @@ const DocsTab = () => {
             </Typography>
             <Button
                 variant="outlined"
-                href="https://dashboard.amirhossein.info/"
+                href="https://docs.amirhossein.info/"
                 sx={{
                     ":hover": {
                         color: "white",
