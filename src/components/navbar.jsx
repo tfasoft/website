@@ -34,10 +34,15 @@ const navItems = [
         inside: false,
     },
     {
+        name: 'Demo',
+        href: 'https://demo.amirhossein.info',
+        inside: false,
+    },
+    {
         name: 'Contact Us',
         href: '/contact',
         inside: true,
-    }
+    },
 ];
 
 const Navbar = () => {
