@@ -120,17 +120,21 @@ const HomePage = () => {
                     >
                         <Box
                             sx={{
-                                p: 5
+                                width: "100%"
                             }}
                         >
                             <Typography
-                                variant="h2"
+                                variant="h3"
                                 fontWeight="700"
-                                fontSize={70}
+                                fontSize={60}
                                 fontFamily="Edu SA Beginner"
                                 color="primary"
                             >
-                                A modern authentication platform
+                                A modern
+                                <br />
+                                authentication
+                                <br />
+                                platform
                             </Typography>
                             <br />
                             <br />
@@ -144,7 +148,10 @@ const HomePage = () => {
                             >
                                 <TabContext value={tab}>
                                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                                        <TabList onChange={changeTab} aria-label="lab API tabs example">
+                                        <TabList
+                                            variant="scrollable"
+                                            onChange={changeTab}
+                                        >
                                             <Tab
                                                 label="What is TFA?"
                                                 value="1"
@@ -173,6 +180,9 @@ const HomePage = () => {
                         </Box>
                     </Grid>
                     <Grid
+                        sx={{
+                            display: { xs: 'none', sm: 'none', md: 'block' }
+                        }}
                         xs={6}
                         item
                     >
@@ -278,7 +288,7 @@ const HomePage = () => {
                 </Typography>
                 <br />
                 <Grid
-                    columns={{ xs: 1, md: 6 }}
+                    columns={{ xs: 6, md: 12 }}
                     spacing={10}
                     container
                 >
@@ -286,7 +296,7 @@ const HomePage = () => {
                         logos.map((logo) => {
                             return (
                                 <Grid
-                                    xs={1}
+                                    xs={2}
                                     item
                                 >
                                     <Box
@@ -302,7 +312,7 @@ const HomePage = () => {
                                             component="img"
                                             alt={logo.alt}
                                             sx={{
-                                                width: "100%"
+                                                width: "75px"
                                             }}
                                         />
                                     </Box>
