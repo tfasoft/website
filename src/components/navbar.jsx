@@ -14,11 +14,17 @@ import {
     ListItem,
     ListItemButton,
     ListItemText,
+    ListItemIcon,
     Divider,
 } from "@mui/material";
 
 import {
-    Menu as MenuIcon,
+    Menu,
+    Dashboard,
+    MenuBook,
+    Biotech,
+    RssFeed,
+    Email,
 } from "@mui/icons-material";
 
 const drawerWidth = 240;
@@ -26,26 +32,31 @@ const navItems = [
     {
         name: 'Dashboard',
         href: 'https://dashboard.amirhossein.info',
+        icon: <Dashboard />,
         inside: false,
     },
     {
         name: 'Docs',
         href: 'https://docs.amirhossein.info',
+        icon: <MenuBook />,
         inside: false,
     },
     {
         name: 'Demo',
         href: 'https://demo.amirhossein.info',
+        icon: <Biotech />,
         inside: false,
     },
     {
         name: 'Blog',
         href: 'https://blog.amirhossein.info',
+        icon: <RssFeed />,
         inside: false,
     },
     {
         name: 'Contact Us',
         href: '/contact',
+        icon: <Email />,
         inside: true,
     },
 ];
@@ -64,7 +75,6 @@ const Navbar = () => {
             <Typography
                 variant="h6"
                 sx={{ my: 2 }}
-                onClick={() => history.push('/')}
             >
                 TFASoft services
             </Typography>
@@ -80,6 +90,7 @@ const Navbar = () => {
                                 href={!item.inside && item.href}
                                 onClick={() => item.inside && history.push(item.href)}
                             >
+                                <ListItemIcon>{ item.icon }</ListItemIcon>
                                 <ListItemText
                                     primary={item.name}
                                 />
@@ -109,7 +120,7 @@ const Navbar = () => {
                             onClick={handleDrawerToggle}
                             sx={{ mr: 2, display: { sm: 'none' } }}
                         >
-                            <MenuIcon />
+                            <Menu />
                         </IconButton>
                         <Typography
                             variant="h6"
