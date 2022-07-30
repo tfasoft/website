@@ -66,7 +66,7 @@ const Navbar = () => {
                 sx={{ my: 2 }}
                 onClick={() => history.push('/')}
             >
-                TFASoft
+                TFASoft services
             </Typography>
             <Divider />
             <List>
@@ -79,7 +79,6 @@ const Navbar = () => {
                             <ListItemButton
                                 href={!item.inside && item.href}
                                 onClick={() => item.inside && history.push(item.href)}
-                                sx={{ textAlign: 'center' }}
                             >
                                 <ListItemText
                                     primary={item.name}
@@ -114,12 +113,10 @@ const Navbar = () => {
                         </IconButton>
                         <Typography
                             variant="h6"
-                            component="div"
                             onClick={() => history.push('/')}
                             sx={{
-                                flexGrow: 1,
-                                display: { xs: 'none', sm: 'block' },
                                 cursor: "pointer",
+                                flexGrow: 1,
                             }}
                         >
                             TFASoft
