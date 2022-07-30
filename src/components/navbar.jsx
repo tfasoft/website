@@ -39,6 +39,11 @@ const navItems = [
         inside: false,
     },
     {
+        name: 'Blog',
+        href: 'https://blog.amirhossein.info',
+        inside: false,
+    },
+    {
         name: 'Contact Us',
         href: '/contact',
         inside: true,
